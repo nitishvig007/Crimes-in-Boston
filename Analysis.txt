@@ -1,0 +1,40 @@
+Analysis :
+
+1. offense_codes csv has duplicate values, so we have changed some of them in excel file.
+
+2. We are trying to find if can find the location to which we can be sure for SHOOTING crime. Hence we are using Logistic Regression which gave us a 0.997 accuracy.
+
+3. once we can identify the crime, we can pinpoint the location
+
+Observation : 
+1. We can see that df['UCR_PART'] has 3 values in column "OFFENSE_CODE".
+Hence we will now check visa-versa for these 3 values in column OFFENSE_CODE, what value it has in column 'UCR_PART'. This will help us to fill NaN value in UCR_PART.
+
+2. On careful inspection, we also found that NaN values for "Lat" and "Long" columns is because of '0' value as it belongs to '0' as per "Location" column.
+
+3.None of the column(DISTRICT, REPORTING_AREA, STREET, Location ) matters, as we have lattitude and longitude columns.
+
+
+
+
+4. None of the columns (OFFENSE_CODE_GROUP, OFFENSE_DESCRIPTION ) matters, as we have OFFENSE_CODE column.
+
+
+Conclusion : 
+1. While using Logisitic Regression, we found that columns of Month and Year doesn't contribute much so we omited it. An accuracy of 0.997 supported it.
+
+2. Shooting cases began from 2017 onwards and maximum cases of shooting happens on Saturday. 
+
+3.  If we take "UCR_PART" column as target then an accuracy of 0.52 doesn't support much.
+
+4. Decision Tree also gave similar result.
+
+
+
+
+
+
+
+
+
+
